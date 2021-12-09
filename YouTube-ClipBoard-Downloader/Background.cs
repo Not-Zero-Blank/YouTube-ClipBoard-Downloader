@@ -65,7 +65,7 @@ namespace YouTube_ClipBoard_Downloader
                                 {
                                     var streamInfo = streamManifest.GetAudioOnlyStreams().GetWithHighestBitrate();
                                     var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
-                                    await youtube.Videos.Streams.DownloadAsync(streamInfo, $"{downloadsPath}/{video.Title}.{streamInfo.Container}");
+                                    await youtube.Videos.Streams.DownloadAsync(streamInfo, $"{downloadsPath}/{video.Title}.mp3");
                                 }
                                 else if (result2 == DialogResult.No)
                                 {
